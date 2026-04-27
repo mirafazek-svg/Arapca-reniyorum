@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-['Nunito',_sans-serif] bg-blue-50 text-slate-800 m-0 p-0 overflow-hidden;
+  }
+  
+  .arabic-text {
+    @apply font-['Tajawal',_sans-serif] leading-tight;
+    direction: rtl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-400 active:bg-green-600 text-white font-bold py-4 px-8 rounded-2xl shadow-[0_8px_0_#16a34a] hover:shadow-[0_6px_0_#16a34a] hover:translate-y-[2px] active:shadow-[0_0px_0_#16a34a] active:translate-y-[8px] transition-all duration-150 uppercase tracking-wide text-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-blue-500 hover:bg-blue-400 active:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl shadow-[0_6px_0_#2563eb] hover:shadow-[0_4px_0_#2563eb] hover:translate-y-[2px] active:shadow-[0_0px_0_#2563eb] active:translate-y-[6px] transition-all duration-150 text-lg;
+  }
+
+  .btn-option {
+    @apply bg-white hover:bg-blue-50 active:bg-blue-100 text-slate-700 font-bold py-4 px-6 rounded-2xl shadow-[0_6px_0_#cbd5e1] hover:shadow-[0_4px_0_#cbd5e1] hover:translate-y-[2px] active:shadow-[0_0px_0_#cbd5e1] active:translate-y-[6px] transition-all duration-150 text-2xl border-2 border-slate-200 flex justify-center items-center;
+  }
+  
+  .card-container {
+    @apply bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-xl border-4 border-white/50;
+  }
+}
+
+/* Custom patterns */
+.pattern-dots {
+  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+  background-size: 30px 30px;
+}
